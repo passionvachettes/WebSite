@@ -1,0 +1,92 @@
+
+.navbar-wrapper {
+  position: fixed;
+  z-index: 100;
+
+  width: 100%;
+}
+
+.navbar-inverse {
+	background-color: rgba(255,255,255,0.8);
+	
+	border-width: 0px;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.navbar-inverse .navbar-nav > li > a  {
+	color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover  {
+	color: gray;	
+}
+
+.navbar .nav .active a {
+	color: black;
+	background: rgba(0,0,0,0.1);
+	
+	transition: 200ms;
+}
+
+.navbar .nav li a:hover, .navbar .nav li.active a:hover {
+	color: black;
+	background: rgba(0,0,0,0.05);
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 20px;
+	font-weight: 500;
+	
+	color: black;
+}
+
+.navbar-inverse .navbar-brand:hover {
+	color: #46B1EC;
+	
+	transition: 400ms;
+}
+
+
+body {
+/*	background: #f4eef2 url(../img/body_texture.png) 0 0;*/
+	background: #D2FFDE;
+}
+
+.organisation .row div{
+  text-align: center;
+}
+
+.organisation_part1 {
+  padding-bottom: 50px;
+}
+
+.organisation_part2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section {
+  padding-top: 100px;
+}
+
+.btn-default {
+	background-color: #53DB7F;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.map_canvas {
+    width: 500px;
+    height: 400px;
+}
+	  
+@media (min-width: 750px) and (max-width: 998px) {
+	.navbar-wrapper {
+		font-size: 11px;
+	}
+	.navbar-brand {
+		font-size: 14px;
+	}
+}

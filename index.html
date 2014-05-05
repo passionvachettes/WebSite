@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vachettes Aventura</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" type="image/jpeg" href="./img/aventura.ico">
+	<!-- Included Bootstrap CSS Files -->
+	<link rel="stylesheet" href="./vendor/css/bootstrap.min.css" />
+
+	<link rel="stylesheet" href="./css/master.css" type="text/css" />
+
+    <style>
+      #map_canvas {
+        width: 450px;
+        height: 450px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+	</script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+		var myLatlng = new google.maps.LatLng(43.578728,-1.301776);
+        var map_options = {
+          center: myLatlng,
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+		var marker = new google.maps.Marker({
+		  position: myLatlng,
+		  map: map,
+		  icon: './img/aventura.ico'
+		});
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+	</script>  
+</head>
+<body data-spy="scroll" data-target=".navbar-wrapper">
+
+	<!-- Navbar -->
+
+	<div class="navbar-wrapper">
+		<div class="container">
+			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Aventura</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="#organisation">Organisation de courses landaises</a></li>
+							<li><a href="#visite">Visite guidée de l'élevage</a></li>
+							<li><a href="#ou">C'est ou?</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li><a href="http://aventura40.skyrock.com/" target="_blank">Notre blog actu</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Carousel -->
+
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="./img/coursiere_1680x1024.jpg" alt="" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>Mlle VICTORINE</h1>
+						<p class="lead">Du bétail de qualité</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./img/professionnalisme_1680x1124.jpg" alt="" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>PROFESSIONNALISME</h1>
+						<p class="lead">Une équipe passionnée</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="./img/spectacle_1680x1124.jpg" alt="" />
+				<div class="container">
+					<div class="carousel-caption">
+						<h1>SPECTACLE</h1>
+						<p class="lead">Du plaisir pour tous</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
+
+	<!-- Marketing messaging and featurettes
+	================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+	<div class="container">
+		<section id="organisation">
+			<div class="organisation">
+				<div class="organisation_part1">
+				<h4>La course Landaise</h4> est un spectacle de vachettes, inoffensif pour les animaux.
+					<h4><p>La ganaderia AVENTURA organise deux types de spectacles en une ou deux parties :</p></h4>
+					<p style="text-indent:20px;"> + Une course landaise intégrale avec écarts et sauts de vachettes landaises,</p>
+					<p style="text-indent:20px;"> + Une démonstration de course landaise suivie de jeux avec les vachettes pour le public. Une occasion pour les spectateurs de venir
+								affronter les vaches lors des jeux proposés (foot, balançoire, anneaux,
+								cocarde, petit veau pour les enfants).</p>							
+					Nous nous déplaçons chez-vous, dans toute la France. Le seul pré-requis est un terrain plat de xx m2 pour l'installation de l'arène et des gradins.
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<img class="img-circle" alt="140x140" src="./img/troupeau_140x140.jpg">
+						<h2>Les vachettes</h2>
+						<p>Des coursières sélectionnées<br>
+						Un taurillon pour les enfants<br>
+						Ecarteurs landais - sauteurs</p>
+					</div>
+					<div class="col-sm-4">
+						<img class="img-circle" alt="140x140" src="./img/camion_186x140.jpg">
+						<h2>Arènes mobiles</h2>
+						Deux arènes mobiles et sécurisées<br>
+						Capacités 400 places assises<br>
+						Sono et animateur</p>
+					</div>
+					<div class="col-sm-4">
+						<img class="img-circle" alt="140x140" src="./img/jeux_140x140.jpg">
+						<h2>Jeux</h2>
+						<p>Jeux pour public<br>Cocarde<br>Animations pour enfants</p>
+					</div>
+				</div>
+				<div class="organisation_part2">
+					<h4><p>La ganaderia AVENTURA implique aussi votre public</p></h4>
+					<p style="text-indent:20px;"> + Des animaux adaptés au public : taurillon pour les enfants, vachettes pour les 10/14 ans et 14/17 ans</p>
+					<p style="text-indent:20px;"> + Des jeux variés avec présence d'une vachette : foot-ball, balançoire, jeu des anneaux, jeu de crève ballon et bien d'autres</p>
+				</div>		
+			</div>	
+		</section>				
+				<!-- START THE FEATURETTES -->
+		<section id="visite">
+			<hr class="featurette-divider">
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Visite de la ganadéria <span class="text-muted"> crée en 2008 </span></h2>
+					<p class="lead">Nous proposons la visite guidée de la ganadéria et du cheptel de 70 animaux dont VICTORINE et PALENCIA(2013) couronnées REINE des SECONDES en 2012 et 2013.
+					</p>
+					<h2>Nos clients : </h2><p class="lead">Commité des fêtes, groupe d'amis, enterrement de vie de garçon, comité d'entreprise, associations, séminaires d'entreprise
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img class="featurette-image img-responsive" alt="500x500" src="./img/visite_500x500.jpg">
+				</div>
+			</div>
+			<div class="organisation_part2">
+				<h4><p>Quelques témoignages :</p>
+				<p style="text-indent:20px;"> Alain : "Super moment entre amis, avec une organisation parfaite"</p>
+				<p style="text-indent:20px;"> René : "Un peu d'apréhension face aux vachettes, mais l'équipe nous a rassuré et tout s'est bien passé"</p>
+				<p style="text-indent:20px;"> Lisa : "Je n'étais pas partante pour faire cette visite, je ne suis pas déçue du voyage !"</p>
+				</h4>
+			</div>					
+		</section>
+
+		<section id="ou">
+			<hr class="featurette-divider">
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2 class="featurette-heading">Située à Saint Martin de Hinx<span class="text-muted"> dans les LANDES (40)</span></h2>
+					<p class="lead">à mi chemin entre bayonne et Dax (30km), sur la route de l'Espagne, la ganadéria se trouve dans un petit village de 1300 habitants, situé sur le chemin de saint jacques de compostelle.
+				</div>
+				<div class="col-md-5">
+					<div class="img-responsive" id="map_canvas"></div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<hr class="featurette-divider">
+			<div class="container contact">
+				<div class="row featurette">
+					<div class="col-md-5">
+						<img src="./img/contact.jpg" class="image">
+					</div>
+					<div class="col-md-7">
+						<h1>Contactez nous <small><br>Nous nous adaptons à votre besoin</small>
+						</h1>
+						<p>06 21 76 05 58</p>
+						<address>
+							<a href="mailto:#">contact@passionvachettes.fr</a>
+						</address>
+						<p>Richard LATASTE</p>
+						<address>
+						  <strong>EURL AVENTURA</strong><br>
+						  1200, Route du seignanx<br>
+						  40390, Saint Martin de Hinx<br>
+						</address>
+						<p></p>
+						<p></p>
+						<p></p>
+					</div>
+				</div>
+				<p style="padding-top: 100px">Téléchargez notre présentation incluant notre revue de presse</p>
+				<a class="btn btn-default" href="./document/Aventura-PressBook.pdf" role="button">Cliquez pour télécharger</a>
+				<p style="padding-top: 100px"></p>
+			</div>	
+		</section>
+		<!-- FOOTER -->
+		<footer>
+			<p class="pull-right"><a href="http://aventura.in-tic.fr/#">Retour en haut</a></p>
+			<p>© 2014 Ganaderia Aventura - · <a href="infos.html">Informations légales</a></p>
+		</footer>
+	</div><!-- /.container -->
+
+	<script src="./vendor/js/jquery-1.10.0.min.js"></script>
+	<script src="./vendor/js/bootstrap.min.js"></script>
+	<script src="./js/script.js"></script>
+
+</body>
+</html>

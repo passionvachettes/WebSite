@@ -1,0 +1,173 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="vachette vachette ganaderia jeux toro toros comité des fêtes 40 64 33 Aquitaine Landes Dax Bayonne Saint Martin de Hinx In TIC In'TIC">
+	<meta name="DC.Description" content="">
+	<meta name="searchtitle" content="">
+	<meta name="DC.Title" content="">
+    <meta name="author" content="Nicolas PRAT">
+	<meta name="author" content="In'TIC | http://www.in-tic.fr">
+	<meta name="DC.Creator" content="In'TIC | http://www.in-tic.fr">
+	<meta name="copyright" content="Copyright (C) GANADERIA Aventura">
+    <link rel="shortcut icon" href="./img/aventura.ico">
+	<meta name="robots" content="all">
+	<meta name="email" content="contact@passionvachettes.fr">
+
+    <title>In'TIC - A propos</title>
+	<script language="javascript" type="text/javascript">
+	 var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', gaProperty]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + 
+    '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  // Remplacez la valeur UA-XXXXXX-Y par l'identifiant analytics de votre site.
+gaProperty = 'UA-XXXXXX-Y'
+
+// Désactive le tracking si le cookie d’Opt-out existe déjà.
+
+var disableStr = 'ga-disable-' + gaProperty;
+
+if (document.cookie.indexOf('hasConsent=false') > -1) {
+window[disableStr] = true;
+}
+//Cette fonction retourne la date d’expiration du cookie de consentement 
+
+function getCookieExpireDate() { 
+ var cookieTimeout = 34214400000;// Le nombre de millisecondes que font 13 mois 
+ var date = new Date();
+date.setTime(date.getTime()+cookieTimeout);
+var expires = "; expires="+date.toGMTString();
+return expires;
+}
+
+// Cette fonction est appelée pour afficher la demande de consentement
+function askConsent(){
+    var bodytag = document.getElementsByTagName('body')[0];
+    var div = document.createElement('div');
+    div.setAttribute('id','cookie-banner');
+    div.setAttribute('width','70%');
+    // Le code HTML de la demande de consentement
+    // Vous pouvez modifier le contenu ainsi que le style
+    div.innerHTML =  '<div style="background-color:#ffffff">Ce site utilise Google Analytics.\
+    En continuant à naviguer, vous nous autorisez à déposer des cookies à des fins de \
+    mesure d\'audience.  Pour s\'opposer à ce dépôt vous pouvez cliquer  \
+    <a href="javascript:gaOptout()">ici</a>.</div>';          
+    bodytag.insertBefore(div,bodytag.firstChild); // Ajoute la bannière juste au début de la page 
+    document.getElementsByTagName('body')[0].className+=' cookiebanner';              
+}
+      
+      
+// Retourne la chaine de caractère correspondant à nom=valeur
+function getCookie(NomDuCookie)  {
+    if (document.cookie.length > 0) {        
+        begin = document.cookie.indexOf(NomDuCookie+"=");
+        if (begin != -1)  {
+            begin += NomDuCookie.length+1;
+            end = document.cookie.indexOf(";", begin);
+            if (end == -1) end = document.cookie.length;
+            return unescape(document.cookie.substring(begin, end)); 
+        }
+     }
+    return null;
+}
+   
+// Fonction d'effacement des cookies   
+function delCookie(name )   {
+    path = ";path=" + "/";
+    domain = ";domain=" + "."+document.location.hostname;
+    var expiration = "Thu, 01-Jan-1970 00:00:01 GMT";       
+    document.cookie = name + "=" + path + domain + ";expires=" + expiration;
+}
+  
+// Efface tous les types de cookies utilisés par Google Analytics    
+function deleteAnalyticsCookies() {
+    var cookieNames = ["__utma","__utmb","__utmc","__utmz","_ga"]
+    for (var i=0; i<cookieNames.length; i++)
+        delCookie(cookieNames[i])
+}
+   
+// La fonction d'opt-out   
+function gaOptout() {
+    document.cookie = disableStr + '=true;'+ getCookieExpireDate() +' ; path=/';       
+    document.cookie = 'hasConsent=false;'+ getCookieExpireDate() +' ; path=/';
+    var div = document.getElementById('cookie-banner');
+    // Ci dessous le code de la bannière affichée une fois que l'utilisateur s'est opposé au dépôt
+    // Vous pouvez modifier le contenu et le style
+    if ( div!= null ) div.innerHTML = '<div style="background-color:#ffffff"> Vous vous êtes opposé \
+    au dépôt de cookies de mesures d\'audience dans votre navigateur </div>'
+    window[disableStr] = true;
+    deleteAnalyticsCookies();
+}
+
+
+
+//Ce bout de code vérifie que le consentement n'a pas déjà été obtenu avant d'afficher
+// la baniére
+var consentCookie =  getCookie('hasConsent');
+if (!consentCookie) {//L'utilisateur n'a pas encore de cookie de consentement
+ var referrer_host = document.referrer.split('/')[2]; 
+   if ( referrer_host != document.location.hostname ) { //si il vient d'un autre site
+   //on désactive le tracking et on affiche la demande de consentement            
+     window[disableStr] = true;
+     window[disableStr] = true;
+     window.onload = askConsent;
+   } else { //sinon on lui dépose un cookie 
+      document.cookie = 'hasConsent=true; '+ getCookieExpireDate() +' ; path=/'; 
+   }
+}
+</script>
+    <link href="stylesheets/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="stylesheets/bootstrap-responsive.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="stylesheets/common.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="stylesheets/fontawesome.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="stylesheets/project.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="stylesheets/mcnegoceautos.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details. <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
+    <title>Ganaderia AVENTURA - Informations légales</title>
+
+  <style type="text/css"></style></head>
+  
+  <body>
+        <div class="container-fluid container-fluid-2 container-fluid-5">
+      <div class="container">
+        <div class="row-fluid">
+            <div class="page-header">
+              <h1>A Propos</h1>
+            </div>
+            <ul>  Site internet réalisé par In'TIC - www.in-tic.fr</ul>
+
+			<br>Site internet de GANADERIA Aventura
+			<br>Route du Seignanx,                                                                                           
+			<br>40390 Saint-Martin-de-Hinx
+			<br>Tél. 05 59 63 85 22
+			<br>
+			<br>SIRET	 52261596200019
+			<br>Dax B 522 615 962
+			<br>SARL unipersonnelle
+			<br>Capital social	 30.000,00 EURO
+			<br>Immatriculation	 26-05-2010
+			<br>
+			<br>Nationalité	 France
+			<br>
+			<br>Directeur de la publication : Richard LATASTE
+			<br>Hébergeur :
+			<br>1&amp;1 Internet AG 
+			<br>Brauerstr. 48 
+			<br>76135 Karlsruhe 
+			<br>Allemagne
+			<br><a href="javascript:gaOptout()">Cliquez ici pour vous opposer aux cookies de mesure d'audience de Google</a>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>
